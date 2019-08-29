@@ -16,7 +16,7 @@ const Open = async properties => {
     const testName = `${Date.now()}-${properties.pageName}`;
     await log(chalk.green(`Opening: ${chalk.blue(properties.url)}`));
     return await cmd.get(
-        `lighthouse --chrome-flags="--headless" --skip-audits=${properties.skipAudits} ${properties.url} ${
+        `./node_modules/lighthouse/lighthouse-cli/index.js --chrome-flags="--headless" --skip-audits=${properties.skipAudits} ${properties.url} ${
             config.output === 'html'
                 ? `--output-path=${reportLocation}/${testName}.html`
                 : '--output=json'
