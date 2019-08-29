@@ -7,10 +7,8 @@ let config = {};
 let targets = {};
 
 const getPackage = () => {
-    //check location of app running;
-    const isDebug = location.includes('node_packages/lighthouse-automatic');
-    pkg = require(path.join(isDebug ? '../' : cwd(), 'package.json'));
-    targets = require(path.join(isDebug ? '../' : cwd(), 'target.json'));
+    pkg = require('../package.json');
+    targets = require('../target.json');
 
     config = pkg['lighthouse-automatic'];
 
@@ -20,7 +18,6 @@ const getPackage = () => {
         );
     }
 
-    config.isDebug = isDebug;
     config.urls = targets;
     config.version = pkg.version;
 
