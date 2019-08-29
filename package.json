@@ -11,6 +11,12 @@
     "engines": {
         "node": ">=12.9.1"
     },
+    "lighthouse-automatic": {
+        "output": "html",
+        "skipAudits": "service-worker,works-offline",
+        "runOnce": true,
+        "log": false
+    },
     "dependencies": {
         "babel-core": "^6.26.0",
         "chalk": "^2.3.0",

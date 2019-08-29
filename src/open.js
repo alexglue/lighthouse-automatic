@@ -39,6 +39,7 @@ const Open = async properties => {
                         `Completed: ${chalk.white(testName)}.report.json`
                     )
                 );
+
             } else {
                 log(chalk.green(`Completed: ${chalk.white(testName)}`));
             }
