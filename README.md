@@ -105,3 +105,6 @@ Head to `<your-project-directory>/lighthouse-reports` and the test results will 
 
 * Post/Curl results to external endpoint
 * Run tests every X minutes
+
+# todo
+cat *.json | jq ".categories.performance.score"

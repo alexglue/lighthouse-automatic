@@ -8,14 +8,13 @@ let config = {};
 const getPackage = () => {
     //check location of app running;
     const isDebug = location.includes('node_packages/lighthouse-automatic');
-    pkg = require(path.join(isDebug ? '../' : cwd(), 'package.json'));
+    let config = require(path.join(isDebug ? '../' : cwd(), 'lighthouse-automatic.json'));
 
-    let config = pkg['lighthouse-automatic'];
     config.isDebug = isDebug;
 
     if (!config) {
         throw new Error(
-            'Package.json Config requires lighthouse-automatic options'
+            'lighthouse-automatic.json Config requires lighthouse-automatic options'
         );
     }
 

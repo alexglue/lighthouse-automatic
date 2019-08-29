@@ -9,7 +9,7 @@ const start = require('./src/app').start;
 
 console.log(
     chalk.green(
-        `Running Lighthouse-automatic: ${chalk.blue('v' + config.version)}`
+        `Running Lighthouse-automatic:`
     )
 );
 
