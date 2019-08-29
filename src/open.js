@@ -40,6 +40,16 @@ const Open = async properties => {
                     )
                 );
 
+                if(config.junit) {
+                    let result = JSON.parse(data);
+                    log(`##teamcity[buildStatisticValue key='common.performance.score' value='${result.categories.performance.score}']`);
+                    log(`##teamcity[buildStatisticValue key='common.accessibility.score' value='${result.categories.accessibility.score}']`);
+                    log(`##teamcity[buildStatisticValue key='common.best-practices.score' value='${result.categories["best-practices"].score}']`);
+                    log(`##teamcity[buildStatisticValue key='common.seo.score' value='${result.categories.seo.score}']`);
+                    log(`##teamcity[buildStatisticValue key='common.pwa.score' value='${result.categories.pwa.score}']`);
+                }
+
+
             } else {
                 log(chalk.green(`Completed: ${chalk.white(testName)}`));
             }

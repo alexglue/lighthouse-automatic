@@ -12,7 +12,8 @@
         "node": ">=12.9.1"
     },
     "lighthouse-automatic": {
-        "output": "html",
+        "output": "json",
+        "junit": true,
         "skipAudits": "service-worker,works-offline",
         "runOnce": true,
         "log": false
