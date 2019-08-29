@@ -7,8 +7,8 @@ let config = {};
 let targets = {};
 
 const getPackage = () => {
-    pkg = require('../package.json');
-    targets = require('../target.json');
+    pkg = require(path.join(cwd(), 'package.json'));
+    targets = require(path.join(cwd(), 'target.json'));
 
     config = pkg['lighthouse-automatic'];
 
